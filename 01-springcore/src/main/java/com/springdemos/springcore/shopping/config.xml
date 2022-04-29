@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="item"
+		class="com.springdemos.springcore.shopping.Item" p:id="80"
+		p:name="lays" p:price="80" p:quantity="4"/>
+
+	<bean name="shoppingcart"
+		class="com.springdemos.springcore.shopping.ShoppingCart" p:customername="Shiksha">
+		<property name="item">
+			<ref bean="item" />
+		</property>
+	</bean>
+     
+</beans>
